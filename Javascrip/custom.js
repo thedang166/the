@@ -1,0 +1,66 @@
+// JavaScript Document
+$(document).ready(function(){
+  $(".btn-toggle").click(function(){
+    $("#menu").slideToggle("fast");
+  });
+$(".btn-nav").click(function(){
+    $(".dropdown-menu").slideToggle("fast");
+  });
+});
+
+$('#slide-danhmuc').owlCarousel({
+    loop:true,
+    nav:false,
+	dots:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:6
+        }
+    }
+})
+$('#ca-1').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+	dots:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+$('#banner').owlCarousel({
+	loop:true,
+    margin:10,
+    nav:true,
+	items:1,
+	autoplay: true, /*Cho phép tự động chạy*/
+	autoplayTimeout: 3000, /*Chờ 3s không có điều khiển sẽ tự động chạy*/
+	smartSpeed: 1000, /*Điều khiển tốc độ chạy qua*/
+	responsive:{
+        0:{
+           nav:true,
+			dots:false,
+        },
+        600:{
+            nav:false,
+			dots:true,
+        },
+        1000:{
+            nav:false,
+			dots:true,
+        }
+    }
+})

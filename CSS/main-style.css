@@ -1,0 +1,727 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("hover.css");
+body {
+	font-family: "Noto Sans", Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 16px;
+	color: #5B5B5B;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+h1, h2, h3, h4, h5 {
+	display:block; 
+	font-weight: 600; /*Semibold*/
+	margin: 0;
+	color: #110101;
+}
+h1 {
+	font-size: 48;
+	line-height: 76px;
+}
+h2 {
+	font-size: 40;
+	line-height: 44px;
+}
+h3 {
+	font-size: 36;
+	line-height: 36px;
+}
+h4 {
+	font-size: 32;
+	line-height: 28px;
+}
+h5 {
+	font-size: 24;
+	line-height: 20px;
+}
+h6 {
+	font-size: 16;
+	margin-top: 0;
+	margin-bottom: 0.3rem;
+}
+.p {line-height: 1.5rem}
+.p-18 {font-size: 18px}
+.p-14{ font-size: 14px}
+.p-14{ font-size: 12px}
+a{text-decoration: none}
+.font-weight-medium {font-weight: 400}
+/*section {
+	margin: 0px 0;
+	border-bottom: 1px solid var(--info);
+	padding-top: 0px
+}*/
+/*-------------Color-Style------------*/
+:root {
+	--primary: #FFAA08;
+	--secondary: #1E8BAD;
+	--success: #54B03D;
+	--error: #BD2915;
+	--dark: #0C5066;
+	--light: #E4EFF2;
+	--info:#C4D3E1;
+}
+.btn {
+	padding: 10px; 
+	text-decoration: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 500px;
+	border: none;
+}
+.text-primary {color: var(--primary)}
+.bg-primary {background-color: var(--primary)}
+.btn-bg-primary:hover{background-color:var(--primary); color: #FFFFFF }
+.btn-bg-primary {background-color: #FFFFFF; border: var(--primary) 1px solid; color: var(--primary)}
+.btn-primary:hover{background-color: #CD8600}
+.btn-primary {background-color: var(--primary)}
+
+
+.text-secondary {color:var(--secondary)}
+.bg-secondary {background-color: var(--secondary)}
+.btn-bg-secondary:hover{background-color:var(--secondary); color: #FFFFFF }
+.btn-bg-secondary {background-color: #FFFFFF; border: var(--secondary) 1px solid; color: var(--secondary)}
+.btn-secondary:hover{background-color: #03455A}
+.btn-secondary {background-color: var(--secondary); color: #FFFFFF}
+
+.btn-footer {background-color: var(--secondary); border:1px solid  #FFFFFF; border-radius: 5px; color: #FFFFFF; margin: 5px;}
+.btn-footer:hover {background-color:#FFFFFF ; border:1px solid #000000; border-radius: 5px; color:#000000}
+
+.text-success {color: var(--success)}
+.bg-success {background-color: var(--success)}
+.btn-bg-success:hover{background-color:var(--success); color: #FFFFFF }
+.btn-bg-success {background-color: #FFFFFF; border: var(--success) 1px solid; color: var(--success)}
+.btn-success:hover{background-color: #358921}
+.btn-success {background-color: var(--success); color: #FFFFFF}
+
+.text-error{color: var(--error)}
+.bg-error {background-color: var(--error)}
+.btn-bg-error:hover{background-color:var(--error); color: #FFFFFF }
+.btn-bg-error {background-color: #FFFFFF; border: var(--error) 1px solid; color: var(--error)}
+.btn-error:hover{background-color: #862619}
+.btn-error {background-color: var(--error); color: #FFFFFF}
+
+.text-dark{color: var(--dark)}
+.bg-dark {background-color: var(--dark)}
+.btn-bg-dark:hover{background-color:var(--dark); color: #FFFFFF }
+.btn-bg-dark {background-color: #FFFFFF; border: var(--dark) 1px solid; color: var(--dark)}
+.btn-dark:hover{background-color: #053241}
+.btn-dark {background-color: var(--dark); color: #FFFFFF}
+
+.text-light{color: var(--light)}
+.bg-light {background-color: var(--light)}
+.btn-light:hover{background-color:#C5D5D9}
+.btn-light {background-color: var(--light)}
+
+.text-info{color: var(--info)}
+.bg-info {background-color: var(--info)}
+.btn-bg-info {background-color: #FFFFFF; border: var(--info) 1px solid; color: var(--info)}
+.btn-bg-info:hover{background-color:var(--info); color: #FFFFFF }
+.btn-info:hover{background-color:#85AED3}
+.btn-info {background-color: var(--info)}
+
+/*------------ hệ thống lưới----------------*/
+*{ box-sizing: border-box}
+.container { /* cho phone */ /* Nếu để chỗ này 80% thì all thiết bị sẽ cố định 80%, còn nếu thêm 2 dòng dưới thì sẽ định dạng lại ipad và pc co dãn */
+	width:90% ; 
+	margin: auto /* giúp đẩy 100% vào giữa*/
+}
+@media (min-width: 600px) /* cho ipad*/
+{
+	.container { 
+	width:100% ; 
+	margin: auto /* giúp đẩy 95% vào giữa*/
+	}
+}
+@media (min-width: 700px) /* cho ipad*/
+{
+	.container { 
+	width:85% ; 
+	margin: auto /* giúp đẩy 95% vào giữa*/
+	}
+}
+@media (min-width: 1000px) /* cho pc*/
+{
+	.container { 
+	width: 98% ; 
+	margin: auto /* giúp đẩy 90% vào giữa*/
+	}
+}
+@media (min-width: 1100px) /* cho pc*/
+{
+	.container { 
+	width: 90% ; 
+	margin: auto /* giúp đẩy 90% vào giữa*/
+	}
+}
+.row { 
+	display: flex;
+	flex-wrap: wrap
+}
+.col-1{width: 8.33%}
+.col-2{ width: 16.66%}
+.col-3{ width: 25%}
+.col-4{ width: 33.33%}
+.col-5{ width: 41.66%}
+.col-6{ width: 50%}
+.col-7{ width: 58.33%}
+.col-8 {width: 66.66%}
+.col-9 {width: 75%}
+.col-10 {width: 83.33%}
+.col-11 {width: 91.66%}
+.col-12 {width: 100%}
+/* tất cả các class bắt đầu bằng col-*/
+[class*="col-"]
+{
+	padding: 15px;
+/*	border: 1px solid red*/
+}
+/*--- hệ thống 12 cho thiết bị medium/ ipad/ tablet từ 600px tới dưới 1000px*/
+@media (min-width:600px)
+{
+	.col-md-1{width: 8.33%}
+	.col-md-2{ width: 16.66%}
+	.col-md-3{ width: 25%}
+	.col-md-4{ width: 33.33%}
+	.col-md-5{ width: 41.66%}
+	.col-md-6{ width: 50%}
+	.col-md-7{ width: 58.33%}
+	.col-md-8 {width: 66.66%}
+	.col-md-9 {width: 75%}
+	.col-md-10 {width: 83.33%}
+	.col-md-11 {width: 91.66%}
+	.col-md-12 {width: 100%}
+}
+/*--- hệ thống 12 cho thiết bị lớn large máy pc từ 1000px trở lên*/
+@media (min-width:1000px)
+{
+	.col-lg-1{ 	width: 8.33%}
+	.col-lg-2{ width: 16.66%}
+	.col-lg-3{ width: 25%}
+	.col-lg-4{ width: 33.33%}
+	.col-lg-5{ width: 41.66%}
+	.col-lg-6{ width: 50%}
+	.col-lg-7{ width: 58.33%}
+	.col-lg-8 {width: 66.66%}
+	.col-lg-9 {width: 75%}
+	.col-lg-10 {width: 83.33%}
+	.col-lg-11 {width: 91.66%}
+	.col-lg-12 {width: 100%}
+}
+.img-100{width: 100%;height: auto} /* ép ảnh bằng 100% của vùng đã chia*/
+
+/*--------- thu vien spacing-----------*/
+.p-0{ padding: 0} /*bỏ lề trong của box*/
+.p-1{ padding: 0.25rem}  /*4px*/
+.p-2{ padding: 0.5rem} /*8px*/
+.p-3{ padding: 1rem}  /*16px*/
+.p-4{ padding: 1.5rem} /*24px*/
+.p-5{ padding: 3rem} /*48px*/
+.pt-10{padding: 10px}
+
+.m-0{ margin: 0} /* bỏ lề ngoài của box*/
+.mb-1{ margin-bottom: 0.25rem}
+.mt-1{ margin-top: 0.25rem}
+.mb-2{ margin-bottom: 0.5rem}
+.mt-2{ margin-top: 0.5rem}
+.mb-3{ margin-bottom: 1rem}
+.mt-3{ margin-top: 1rem}
+.mb-4{ margin-bottom: 1.5rem}
+.mt-4{ margin-top: 1.5rem}
+.mb-5{ margin-bottom: 3rem}
+.mt-5{ margin-top: 3rem}
+.mx-auto{ margin-left: auto; margin-right: auto} /*Đẩy box vào giữa đối tượng mẹ*/
+
+/* ----------thu vien duong vien----------*/
+.border {border: 1px solid lightblue}
+
+/*---------------thu vien flex-------------------*/
+.align-vertical-center { align-items:center	}
+.align-vertical-start{ align-items:flex-start}
+.align-vertical-end{ align-items:flex-end}
+.flex-row-reverse { flex-direction: row-reverse} /*Đảo ngược row(hàng ngang)*/
+
+.text-align-end {
+	text-align: end;
+	padding-right: 10px;
+}
+.text-align-start {
+	text-align: start;
+	padding-left: 10px;
+}
+.space-img{
+	margin-left: 2px;
+}
+#social-topbar {
+	display: none;
+}
+@media (min-width: 600px) /* cho ipad*/
+{
+	.text-align-end {
+		text-align: end;
+		padding-right: 25px;
+	}
+	.text-align-start {
+		text-align: start;
+		padding-left: 25px;
+	}
+	.space-img{
+	margin-left: 5px;
+	}
+	#social-topbar {
+	display:block;
+}
+}
+@media (min-width: 1000px) /* cho pc*/
+{
+	.text-align-end {
+		text-align: end;
+		padding-right: 40px;
+	}
+	.text-align-start {
+		text-align: start;
+		padding-left: 40px;
+	}
+	.space-img{
+	margin-left: 10px;
+	}
+	#social-topbar {
+	display:block;
+}
+}
+#topbar b{
+	align-items: center;
+	font-size: 12px;
+	color:#130D0D ;
+}
+/*---------------------Style cho Navbar---------------------*/
+.navbar {
+	padding:10px 0;
+	position: relative;/*Cho phép sự quan hệ với các đối tượng trong box nav*/
+	z-index: 999999;
+	background-color: #F9F9F9;
+}
+.navbar .container {
+	position: relative;
+}
+#search {
+	border: #F5ECC3 1px solid;
+	border-radius: 10px;
+	width: 180px;
+	height: 30px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5) ;
+	font-size: 12px;
+	margin-bottom: 5px;
+	padding: 7px 5px;
+	cursor: text;
+	display: none;
+	margin-left: 30px;
+}
+#search img:hover{
+	width: 18px;
+	cursor: pointer;
+}
+#menu {
+	margin-top: 10px; 
+	display: none;
+}
+.navbar .btn-toggle {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	font-weight: bold; 
+	font-size: 1.2rem;
+	padding: 2px 10px;
+	background-color:#E1DBDB; color:#252525;
+}
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.navbar ul li{
+	margin:0 5px;
+	position: relative;
+}
+.navbar ul li a{
+	color:#0A0707;
+	font-weight: 600;
+	padding: 5px;
+	text-decoration: none; /*Bỏ đường gạch chân*/
+	display: block; /*Tạo khối vuông cho box*/
+	border-bottom: var(--info) 1px solid;
+} 
+/*.navbar ul li a:hover{
+	border-bottom: var(--primary) 1px solid;
+	background-color: var(--primary);
+} */
+/*.fixed-top {
+	position: fixed;
+	width: 100%;
+	top:0;left: 0;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.4)*/
+.navbar form{ display: none}
+@media (min-width:1000px) /*Co dãn thiết bị*/
+{
+	
+	.navbar ul {
+		display: flex; /*Đẩy các list ul nằm ngang*/
+	}  
+	.btn-toggle{display: none} /*Thiết bị trên 1000px thì icon menu ẩn đi*/
+	#menu {display: block !important;}
+	.navbar form{display: block !important}
+	.navbar .container{ 
+		display: flex;
+		align-items: center;
+		justify-content:space-between
+}
+	.navbar ul li a{ border-bottom: none;}
+	.navbar #search {display: block;}
+}
+@media (min-width:600px) /*Co dãn thiết bị*/
+{
+	#menu {
+		display: block;
+		}
+	.navbar .container{ 
+		justify-content:space-between
+}
+	.navbar #search {display: block;}
+}
+/*--------------------------Style Dropdown-menu----------------------------*/
+.dropdown-menu {
+	position: absolute;
+	z-index: 9999;
+	padding: 10px;
+	top: 200%;
+	left: 0;
+	background-color: azure;
+	width: 200px;
+	transition: all 0.5s;
+	visibility: hidden; /*Nếu dùng display thì nó chỉ thoắt hiện thôi*/
+	opacity: 0;
+}
+.navbar ul li:hover> .dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+	top: 100%;
+}
+.mega-menu {
+	width: 700px;
+	left: -200px;
+}
+.mega-menu h4 {
+	font-weight:bold;
+	color:#071377;
+}
+@media (max-width: 1000px) {
+	.dropdown-menu {
+		position: static; /*Static là khi nằm ở trên trang đẩy các đối tượng khác xuống*/
+		top: 100%;
+		left: 0;
+		display: none;
+		transition: none;
+		width: 100%;
+	}
+} /*Chưa hoàn thiện*/
+/*--------------------------Thư viện align cho text----------------------------*/
+.text-center {text-align: center;}
+.text-end {text-align:right}
+.text-start{text-align: left}
+.text-bold{ font-weight: 800;}
+.text-inline{
+	font-weight: 400;
+	text-decoration: line-through;
+}
+/*------- thu vien shadow--------------*/
+.shadow-2 { box-shadow:0 2px 4px rgba(171,190,209,0.6)}
+.shadow-4 { box-shadow:0 4px 8px rgba(171,190,209,0.4)}
+.shadow-6 { box-shadow:0 6px 12px rgba(171,190,209,0.3)}
+.shadow-8 { box-shadow:0 8px 16px rgba(171,190,209,0.4)}
+.shadow-16 { box-shadow:0 16px 32px rgba(171,190,209,0.3)}
+
+.hvr-bgcolor,.hvr-img-rotate img{
+	transition: all 2s;
+}
+.hvr-bgcolor:hover{
+	background-color:aquamarine;
+}
+.hvr-img-rotate:hover img{
+	transform: scale(1.2) rotateY(180deg)
+}
+/*---------------------Định dạng banner------------------*/
+ #slide {
+	margin-top: 0px;
+}
+#banner .owl-item img {
+	width: 100%;
+	margin: auto;
+	display: block;
+}
+#banner .owl-dots {
+	position:absolute;
+	width: 100%;
+	bottom: 20px;
+} /* Định dạng cho cục tròn*/
+/*#banner .owl-nav {
+	position:absolute;
+	border: 3px solid green;
+	top: 45%;
+	width: 100%;
+	left: 0
+}/* Định dạng cho mũi tên*/
+/*#banner .owl-nav button.owl-prev{
+	position: absolute;
+	left: 0
+} /*Định dạng mũi tên trái*/
+/*#banner .owl-nav button.owl-next{
+	position: absolute;
+	right: 0
+}/*Định dạng mũi tên phải*/
+#banner .owl-nav button.owl-prev:hover,#banner .owl-nav button.owl-next:hover{
+	background: none;
+	color: var(--primary);
+}
+
+/*---------------------Định dạng Danh mục sản phẩm------------------*/
+section {
+	margin-top: 15px;
+}
+#danh-muc-sp h2{
+	border-bottom: 1px solid var(--dark);
+	border-top: 1px solid var(--dark);
+	width: 50%;
+	margin: auto;
+}
+.card-danhmuc{
+	background-color: var(--light);
+	padding:10px 40px;
+	margin: 0px 10px;
+	cursor: pointer;
+}
+/*---------------------Định dạng card------------------*/
+.card {
+	position: relative;
+	border: 1px solid  #ddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	overflow: hidden; /*Nếu đối tượng nào dư ra ngoài thì ẩn đi*/
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.card-icon {
+	position:relative;
+	text-align: center;
+}
+.card-body {
+	position: relative;
+	padding: 0px;
+	background-color: #FFFFFF;
+	text-align: center;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	width: 100%;
+}
+.card-body .row{
+	padding: 0px;
+	margin: 0px;
+}
+.card-body [class*="col-"]{
+	padding: 0px;
+	margin: 0px;
+}
+/*---------------------Định dạng SP New------------------*/
+#sp-new h2 {
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#sp-new .card-icon {
+	position:absolute;
+	width: 100%;
+	align-items: center;
+	transition: all 1s;
+	opacity: 0;
+	bottom: 20%;
+
+}
+#sp-new .card:hover> .card-icon {
+	opacity:1;
+	bottom: 35%;
+}
+#sp-new i {
+	font-size: 30px;
+	margin: 0 15px;
+	color: var(--primary);
+}
+#sp-new i:hover {
+	font-size: 35px;
+}
+#sp-new .card img {
+	transform: all 1s;
+}
+#sp-new .card:hover> img {
+	filter: blur(2px);
+}
+#sp-new .card:hover> .card-body {
+	background-color: beige;
+}
+@media (min-width: 1000px) /* cho ipad*/
+{
+	.card-icon{display: block;}
+}
+@media (max-width: 1000px) /* cho ipad*/
+{
+	.card-icon{display: none;}
+}
+#sp-new .btn {
+	margin-top: 5px;
+	margin-left: 2px;
+}
+#slide-km .btn {
+	margin-top: 5px;
+}
+.btn-buy {
+	display: none;
+}
+@media (max-width: 1000px) /* cho ipad*/
+{
+	.btn-buy {display: block;}
+}
+/*---------------------Định dạng SP KM-----------------*/
+#slide-km {
+	background-color: var(--secondary);
+	padding:10px 0;
+}
+.h2-sale {
+	background-color: var(--error);
+	color: #FFFFFF;
+}
+#slide-km .card-icon {
+	position:absolute;
+	width: 100%;
+	align-items: center;
+	transition: all 1s;
+	opacity: 0;
+	bottom: 20%;
+
+}
+#slide-km .card:hover> .card-icon {
+	opacity:1;
+	bottom: 35%;
+}
+#slide-km i {
+	font-size: 30px;
+	margin: 0 15px;
+	color: var(--primary);
+}
+#slide-km i:hover {
+	font-size: 35px;
+}
+#slide-km .card img {
+	transform: all 1s;
+}
+#slide-km .card:hover> img {
+	filter: blur(2px);
+}
+#slide-km .card:hover> .card-body {
+	background-color: beige;
+}
+/*---------------------Định dạng blog------------------*/
+#blog .card{
+	overflow: visible;
+	margin-bottom: 25px;
+}
+#blog .card-body {
+	position: absolute; /*Con trong card-body lớn*/
+	width: 80%;
+	left:10%;
+	border-radius: 8px;
+	background: var(--info);
+	padding: 16px;
+	bottom: -10%;
+	transition: all 1s;
+}
+#blog .pin{
+	position: absolute;
+	background-color: rgba(255,255,255,0.50);
+	padding: 5px 20px;
+	right: -35px;
+	top: 30px;
+	transform: rotate(45deg);
+	text-align: center;
+	transition: all 1s;
+	opacity: 0;
+}
+#blog .card img {
+	transition: all 1s
+}
+#blog .card img:hover{
+	filter: blur(2px)
+}
+#blog .card:hover> .card-body{
+	opacity: 1;
+	bottom: 5%
+}
+#blog .card:hover> .pin{
+	opacity: 1;
+}
+#blog h2{
+	background-color: antiquewhite
+}
+/*---------------------Định dạng footer------------------*/
+#footer {
+	margin-top: 100px;
+	background-color: var(--secondary);
+	color: #FFFFFF;
+	font-size: 13px;
+}
+#footer h3 {
+	color: #FFFFFF;
+}
+.border-col {
+	border-right: 1px solid #FFFFFF;
+}
+.nhap-email {
+	background-color: var(--secondary);
+	border: 1px solid #FFFFFF;
+	border-radius: 5px;
+	width: 100%;
+	padding: 5px;
+	font-size: 13px;
+}
+#dk-footer [class*="col-"]{
+	border-right:  none;
+	padding: 0;
+	padding-left: 5px;
+}
+.banquyen {
+	background-color:#629ED0;
+}
+.banquyen span{
+	color: var(--primary)
+}
+#footer-logo [class*="col-"]{
+	border-right:  none;
+}
+@media (min-width: 600px) /* cho ipad*/
+{
+	#tukhoa {
+		display: none;
+	}
+}
+@media (min-width: 1000px) /* cho ipad*/
+{
+	#tukhoa {
+		display: block;
+	}
+}
+@media (max-width: 600px) /* cho ipad*/
+{
+	#tukhoa {
+		display: none;
+	}
+	#thong-tin-khac {display: none;}
+}
+#thong-tin-khac p:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
